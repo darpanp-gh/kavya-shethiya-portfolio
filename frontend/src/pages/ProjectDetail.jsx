@@ -65,45 +65,45 @@ const ProjectDetail = () => {
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Project Info Cards */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-xl border border-indigo-100">
+          <div className="bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 p-6 rounded-xl border border-indigo-100 dark:border-indigo-800">
             <div className="flex items-center gap-3 mb-3">
-              <Clock className="w-6 h-6 text-indigo-600" />
-              <h3 className="text-lg font-semibold text-gray-900">Duration</h3>
+              <Clock className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Duration</h3>
             </div>
-            <p className="text-gray-700">{project.duration}</p>
+            <p className="text-gray-700 dark:text-gray-300">{project.duration}</p>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-blue-100 dark:border-blue-800">
             <div className="flex items-center gap-3 mb-3">
-              <User className="w-6 h-6 text-blue-600" />
-              <h3 className="text-lg font-semibold text-gray-900">Role</h3>
+              <User className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Role</h3>
             </div>
-            <p className="text-gray-700">{project.role}</p>
+            <p className="text-gray-700 dark:text-gray-300">{project.role}</p>
           </div>
         </div>
 
         {/* Full Description */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-            <span className="w-2 h-8 bg-indigo-600 rounded-full"></span>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+            <span className="w-2 h-8 bg-indigo-600 dark:bg-indigo-500 rounded-full"></span>
             Project Overview
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             {project.fullDescription}
           </p>
         </div>
 
         {/* Technologies */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-            <Wrench className="w-8 h-8 text-indigo-600" />
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+            <Wrench className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
             Technologies Used
           </h2>
           <div className="flex flex-wrap gap-3">
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-lg font-medium hover:bg-indigo-200 transition-colors"
+                className="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-lg font-medium hover:bg-indigo-200 dark:hover:bg-indigo-900/50 transition-colors"
               >
                 {tech}
               </span>
@@ -113,12 +113,12 @@ const ProjectDetail = () => {
 
         {/* Challenges */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-            <Target className="w-8 h-8 text-blue-600" />
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+            <Target className="w-8 h-8 text-blue-600 dark:text-blue-400" />
             Challenges
           </h2>
-          <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-            <p className="text-lg text-gray-700 leading-relaxed">
+          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl border border-blue-100 dark:border-blue-800">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               {project.challenges}
             </p>
           </div>
@@ -126,20 +126,20 @@ const ProjectDetail = () => {
 
         {/* Outcomes */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-            <TrendingUp className="w-8 h-8 text-green-600" />
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+            <TrendingUp className="w-8 h-8 text-green-600 dark:text-green-400" />
             Outcomes & Achievements
           </h2>
-          <div className="bg-green-50 p-6 rounded-xl border border-green-100">
-            <p className="text-lg text-gray-700 leading-relaxed">
+          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl border border-green-100 dark:border-green-800">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               {project.outcomes}
             </p>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="text-center pt-8 border-t border-gray-200">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="text-center pt-8 border-t border-gray-200 dark:border-gray-700">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Interested in Learning More?
           </h3>
           <button
@@ -149,7 +149,7 @@ const ProjectDetail = () => {
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }, 100);
             }}
-            className="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium shadow-lg hover:shadow-xl"
+            className="px-8 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors font-medium shadow-lg hover:shadow-xl"
           >
             Get in Touch
           </button>
