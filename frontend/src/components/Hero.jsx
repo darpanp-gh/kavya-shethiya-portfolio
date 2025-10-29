@@ -31,11 +31,12 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96 md:h-[500px]">
             <img
               src="https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/8aqqjcsz_Kavya.jpg"
               alt="Kavya Shethiya"
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-cover object-center"
+              style={{ objectPosition: 'center 30%' }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent"></div>
           </div>
