@@ -3,15 +3,23 @@ export const projectsData = [
     id: 'tandem-wing-uav',
     title: 'Tandem-Wing UAV Configuration',
     shortDescription:
-      'Aerodynamic and structural design of a tandem-wing UAV using NACA airfoil profiles for enhanced lift and stability.',
+      'Compact tandem-wing fixed-wing UAV under 1 kg with NACA 4412 airfoils, designed for efficient stable flight with balanced lift distribution and excellent control flexibility.',
     image: 'https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/ml3u0bga_Tandem%20wing.png',
     fullDescription:
-      'This project focuses on the innovative design of a tandem-wing UAV configuration, featuring two main wings positioned one behind the other. The design utilizes NACA airfoil profiles optimized for efficient lift distribution and aerodynamic stability. Through extensive CFD analysis and structural simulations, the configuration achieves superior lift-to-drag ratios while maintaining structural integrity during flight operations.',
-    technologies: ['Fusion 360', 'CFD Analysis', 'NACA Airfoils', 'Structural Design'],
+      'A sophisticated tandem-wing UAV configuration featuring two main wings (600 mm front span, 800 mm rear span) positioned 600 mm apart with optimized NACA 4412 airfoil profiles. The design achieves total weight under 1 kg with integrated battery (4S 3000 mAh LiPo) and dual Emax 1300 KV motors. The configuration features a 38% center of gravity placement for superior stability, utilizing carbon-fiber spars with 3D-printed PLA ribs and foam skin construction. Equipped with 4 servos operating flaperons for pitch and roll control, with yaw achieved through differential thrust. The system achieves 15–20 m/s cruise velocity with 30–50 minute endurance.',
+    technologies: ['Fusion 360', 'NACA 4412 Airfoils', 'CFD Analysis', 'SpeedyBee F405 Flight Controller', 'ELRS Nano Receiver', 'Mission Planner'],
+    specifications: {
+      weight: '< 1 kg',
+      wingArea: '0.156 m²',
+      cruiseVelocity: '15–20 m/s',
+      endurance: '30–50 minutes',
+      liftToDragRatio: '≈6:1',
+      reynoldsNumber: '≈1.2 × 10⁵',
+    },
     challenges:
-      'Balancing aerodynamic efficiency with structural weight, ensuring proper center of gravity placement, and managing complex wing interference effects.',
+      'Balancing aerodynamic efficiency with structural weight, optimizing lift distribution between front (55–60%) and rear wings, and managing complex wing interference effects. Achieving proper center of gravity placement while maintaining structural integrity.',
     outcomes:
-      'Successfully designed and validated a tandem-wing configuration with 15% improved lift efficiency compared to conventional designs. The project demonstrated strong potential for long-endurance surveillance applications.',
+      'Successfully designed and validated a compact tandem-wing configuration with stable flight at 15 m/s and moderate glide ratio (6:1). Demonstrated excellent potential for surveillance and mapping applications with superior endurance compared to conventional designs.',
     duration: '6 months',
     role: 'Lead Designer',
   },
