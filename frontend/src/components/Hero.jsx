@@ -33,8 +33,8 @@ const Hero = () => {
         <div className="relative">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1662348316911-d6aef85f8560?w=800&q=80"
-              alt="Engineering workspace"
+              src="https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/8aqqjcsz_Kavya.jpg"
+              alt="Kavya Shethiya"
               className="w-full h-auto object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent"></div>
