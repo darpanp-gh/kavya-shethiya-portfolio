@@ -76,7 +76,7 @@ export const projectsData = [
     title: '3D Printing Business',
     shortDescription:
       'Custom 3D printing service creating innovative decor, functional organizers, and unique products using Bambu Lab technology.',
-    image: 'https://images.unsplash.com/photo-1582879304171-8041c73bedbd?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/rg7p9k2m_home_decor.jpg',
     fullDescription:
       'A thriving 3D printing business specializing in custom-designed decor items, functional organizers, and innovative products. Utilizing state-of-the-art Bambu Lab printers, the business combines design creativity with precision manufacturing to deliver high-quality products. From conceptual design to final production, each piece is crafted with attention to detail and customer requirements.',
     technologies: ['Bambu Lab Studio', 'Fusion 360', 'Product Design', 'Additive Manufacturing'],
@@ -86,5 +86,53 @@ export const projectsData = [
       'Successfully launched business with 50+ satisfied customers, created a product line of 20+ original designs, and achieved 95% first-time-right print success rate.',
     duration: 'Ongoing',
     role: 'Designer & Manufacturer',
+  },
+  {
+    id: 'fidget-toys',
+    title: 'Fidget Toys Product Line',
+    shortDescription:
+      'Innovative collection of 3D-printed fidget toys including geometric gears, planetary spinners, and tactile fidget rings with multiple color variations.',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F3c0e1f503fc24708b890343eacd90cdb%2F7c230dfdb4084943a458f8ddae654683?format=webp&width=800',
+    fullDescription:
+      'A diverse product line of custom-designed fidget toys created using advanced 3D printing technology. The collection features multiple innovative designs: Planetary Gear Fidget Spinners with complex interlocking components demonstrating intricate CAD modeling; Geometric Planetary Gears Fidget Spinners in monocolor, multicolor #1, and multicolor #2 variants; and Tactical Fidget Rings in vibrant colors (green, white, red). Each design combines satisfying tactile feedback with eye-catching aesthetics. The Planetary Gear Fidget Spinner (RAZOR) showcases six different color combinations with precision ball bearings for smooth operation. All pieces are manufactured using high-precision 3D printing to ensure smooth surfaces and perfect tolerances for an optimal fidgeting experience.',
+    technologies: ['Fusion 360', 'CAD Design', '3D Printing (FDM)', 'Bambu Lab', 'Product Rendering', 'Design for Manufacturing'],
+    productCategories: [
+      'Planetary Gear Fidget Spinners (multiple color variants)',
+      'Geometric Planetary Gears Fidget Spinners',
+      'Core Geometric Planetary Gears Spinners (color variations)',
+      'Tactical Fidget Rings (red, green, white)',
+    ],
+    challenges:
+      'Designing complex interlocking components that spin smoothly, optimizing geometry to minimize friction and ensure durability, maintaining precise tolerances during 3D printing, and creating visually appealing color combinations.',
+    outcomes:
+      'Created 12+ unique fidget toy designs with consistent positive customer feedback. Achieved print success rates exceeding 98% with customers praising the smooth spinning action and quality construction. Products have become popular items in the 3D printing business portfolio.',
+    duration: 'Ongoing Collection',
+    role: 'Product Designer & Manufacturer',
+  },
+  {
+    id: 'home-decor-products',
+    title: 'Home Decor Products Collection',
+    shortDescription:
+      'Premium 3D-printed home decor and organizational items including decorative lighting, elegant vases, stylish plant holders, and modern desk organizers.',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F3c0e1f503fc24708b890343eacd90cdb%2Fb91ab7297c324e17bfc82073fca850ea?format=webp&width=800',
+    fullDescription:
+      'An elegant collection of 3D-printed home decor and organizational products designed to enhance interior spaces. The product line includes: Night Lamp Shades featuring textured designs that create beautiful light diffusion patterns, available in neutral and warm tones; Blooming Lotus Lamp Shades with sculptural petal designs that cast intricate shadows; Vases and Flower Pots in various wavy, geometric, and organic forms suitable for modern and contemporary interiors; Small Stylish Planters in multiple colors with textured surfaces; Desk Organizers with multiple compartments for office supplies, featuring ergonomic designs; and Jewelry Holders in elegant forms designed to display and store jewelry. Each piece is meticulously crafted to combine functionality with aesthetic appeal, featuring smooth finishes and precise details that showcase the capabilities of advanced 3D printing technology.',
+    technologies: ['Fusion 360', 'Product Design', '3D Printing (FDM)', 'Bambu Lab Studio', 'Surface Finishing', 'Design for Function'],
+    productCategories: [
+      'Night Lamp Shades (multiple designs and colors)',
+      'Blooming Lotus Lamp Shade (sculptural design)',
+      'Vases and Flower Pots (various styles)',
+      'Small Stylish Planters (multiple colors)',
+      'Desk Organizers (compartmented designs)',
+      'Jewelry Holders (elegant forms)',
+      'Decorative Candle Holders (textured designs)',
+      'Wall Organizers (multi-function designs)',
+    ],
+    challenges:
+      'Creating functional home decor that balances aesthetic appeal with structural integrity, optimizing designs for 3D printing while maintaining fine details, ensuring watertight seals for items containing liquids, and designing for smooth post-processing.',
+    outcomes:
+      'Successfully created 25+ home decor designs with strong customer demand. Products have achieved recognition for combining modern aesthetics with functionality. Sales indicate particular success with lamp shades and desk organizers. Customers consistently praise the quality, attention to detail, and unique designs.',
+    duration: 'Ongoing Collection',
+    role: 'Product Designer & Manufacturer',
   },
 ];
