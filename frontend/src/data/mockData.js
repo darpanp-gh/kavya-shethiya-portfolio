@@ -4,7 +4,7 @@ export const projectsData = [
     title: 'Tandem-Wing UAV Configuration',
     shortDescription:
       'Aerodynamic and structural design of a tandem-wing UAV using NACA airfoil profiles for enhanced lift and stability.',
-    image: 'https://images.unsplash.com/photo-1751842936164-54cb97bf6aba?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/ml3u0bga_Tandem%20wing.png',
     fullDescription:
       'This project focuses on the innovative design of a tandem-wing UAV configuration, featuring two main wings positioned one behind the other. The design utilizes NACA airfoil profiles optimized for efficient lift distribution and aerodynamic stability. Through extensive CFD analysis and structural simulations, the configuration achieves superior lift-to-drag ratios while maintaining structural integrity during flight operations.',
     technologies: ['Fusion 360', 'CFD Analysis', 'NACA Airfoils', 'Structural Design'],
@@ -20,7 +20,7 @@ export const projectsData = [
     title: 'Hybrid UAV (VTOL Fixed-Wing)',
     shortDescription:
       'Advanced hybrid UAV combining vertical take-off capabilities with efficient fixed-wing flight using tilt-rotor V-tail configuration.',
-    image: 'https://images.unsplash.com/photo-1745390397223-a07a550fb7bb?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/h1sf5c46_Hybrid%20Uav.png',
     fullDescription:
       'A cutting-edge hybrid UAV design that seamlessly transitions between VTOL (Vertical Take-Off and Landing) and fixed-wing flight modes. The system employs an innovative tilt-rotor V-tail mechanism controlled via INAV flight controller, enabling vertical lift-off followed by efficient horizontal cruise. This design eliminates the need for runways while maintaining the range and endurance benefits of fixed-wing aircraft.',
     technologies: ['INAV', 'Tilt-Rotor Mechanism', 'Flight Control Systems', 'Aerodynamics', 'Mission Planner'],
@@ -36,7 +36,7 @@ export const projectsData = [
     title: 'Nautix',
     shortDescription:
       'Marine robotic platform designed for underwater and surface exploration with advanced sensor integration.',
-    image: 'https://images.unsplash.com/photo-1754297813553-43eb3a9f65a4?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/1lf2exnd_Nautix.png',
     fullDescription:
       'Nautix is a versatile marine robotic platform capable of both underwater and surface operations. The system integrates waterproof sensors, cameras, and navigation equipment to perform exploration and data collection missions. Designed with modularity in mind, Nautix can be configured for various marine applications including environmental monitoring, underwater mapping, and research operations.',
     technologies: ['Embedded Systems', 'Waterproof Electronics', 'Marine Navigation', 'Arduino', 'Sensor Fusion'],
@@ -52,7 +52,7 @@ export const projectsData = [
     title: 'ShadowNet',
     shortDescription:
       'Advanced defense concept featuring a mothership deploying tethered underwater drones for surveillance and security operations.',
-    image: 'https://images.unsplash.com/photo-1727600950805-f692370ff0a4?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/ke8g14g2_shadownet%20%282%29.png',
     fullDescription:
       'ShadowNet represents an innovative defense and surveillance concept where a surface mothership deploys and coordinates multiple tethered underwater drones. The tethered connection provides continuous power and high-bandwidth data transfer, enabling extended surveillance missions without battery limitations. The system is designed for harbor security, underwater infrastructure monitoring, and coastal defense applications.',
     technologies: ['System Architecture', 'Surveillance Systems', 'Drone Coordination', 'Communication Protocols'],
