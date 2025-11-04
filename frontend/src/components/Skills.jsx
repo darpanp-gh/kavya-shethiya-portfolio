@@ -3,10 +3,10 @@ import { Wrench, Cpu, Plane, Printer, Settings, Users, Lightbulb, Target, Zap, H
 
 const technicalSkills = [
   { name: 'CAD Design', description: 'Fusion 360, AutoCAD', icon: Wrench },
-  { name: 'Embedded Systems', description: 'Arduino, STM32', icon: Cpu },
-  { name: 'UAV Integration', description: 'INAV, ArduPilot', icon: Plane },
+  { name: 'Embedded Systems', description: 'Arduino, Development Boards', icon: Cpu },
+  { name: 'UAV Integration', description: 'Flight Controllers', icon: Plane },
   { name: '3D Printing', description: 'Bambu Lab Studio', icon: Printer },
-  { name: 'Flight Configuration', description: 'Mission Planner', icon: Settings },
+  { name: 'Flight Configuration', description: 'INAV, Mission Planner', icon: Settings },
 ];
 
 const softSkills = [
