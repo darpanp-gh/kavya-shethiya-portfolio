@@ -12,7 +12,7 @@ const Hero = () => {
             Building UAVs, Robots, and Systems that Move
           </p>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            B.Tech Mechatronics Student passionate about aerospace engineering, robotics, and innovation. 
+            B.Tech Mechatronics Student passionate about military technology, robotics, and innovation. 
             Designing the future of autonomous systems.
           </p>
           <div className="flex gap-4 pt-4">
