@@ -4,7 +4,7 @@ export const projectsData = [
     title: 'Tandem-Wing UAV Configuration',
     shortDescription:
       'Aerodynamic and structural design of a tandem-wing UAV using NACA airfoil profiles for enhanced lift and stability.',
-    image: 'https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/ml3u0bga_Tandem%20wing.png',
+    image: 'https://customer-assets.emergentagent.com/job_3bfe5c56-256c-479b-a15b-fa7b058672b9/artifacts/q7po4v0m_Tandem%20wing%20%282%29.png',
     fullDescription:
       'This project focuses on the innovative design of a tandem-wing UAV configuration, featuring two main wings positioned one behind the other. The design utilizes NACA airfoil profiles optimized for efficient lift distribution and aerodynamic stability. Through extensive CFD analysis and structural simulations, the configuration achieves superior lift-to-drag ratios while maintaining structural integrity during flight operations.',
     technologies: ['Fusion 360', 'CFD Analysis', 'NACA Airfoils', 'Structural Design'],
