@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import { Award, X } from 'lucide-react';
+import arnobotCertificate from '../assets/images/image.png';
 
 const certificatesData = [
+  {
+    id: 5,
+    title: 'Robotics Internship Certificate',
+    organization: 'ARNOBOT Pvt. Ltd.',
+    date: 'April 2026',
+    image: arnobotCertificate,
+  },
   {
     id: 1,
     title: 'Industrial Training - Industrial Robotics',

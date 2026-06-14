@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Mail, Phone } from 'lucide-react';
+import { Link as Linkedin, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -23,6 +23,12 @@ const Footer = () => {
                 className="block text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
               >
                 Home
+              </button>
+              <button
+                onClick={() => document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })}
+                className="block text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
+              >
+                Experience
               </button>
               <button
                 onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}

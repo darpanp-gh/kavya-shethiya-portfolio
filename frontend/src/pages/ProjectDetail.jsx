@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projectsData } from '../data/mockData';
-import { ArrowLeft, Clock, User, Wrench, Target, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Clock, User, Wrench, Target, TrendingUp, Images, MapPin, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find(p => p.id === id);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
 
   if (!project) {
     return (
@@ -23,6 +24,13 @@ const ProjectDetail = () => {
       </div>
     );
   }
+
+  const hasGallery = project.images && project.images.length > 0;
+
+  const openLightbox = (index) => setLightboxIndex(index);
+  const closeLightbox = () => setLightboxIndex(null);
+  const prevImage = () => setLightboxIndex((i) => (i - 1 + project.images.length) % project.images.length);
+  const nextImage = () => setLightboxIndex((i) => (i + 1) % project.images.length);
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -93,11 +101,31 @@ const ProjectDetail = () => {
           </p>
         </div>
 
-        {/* Technologies */}
+        {/* Applications */}
+        {project.applications && project.applications.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+              <MapPin className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              Applications
+            </h2>
+            <div className="flex flex-wrap gap-3">
+              {project.applications.map((app, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg font-medium border border-blue-200 dark:border-blue-800"
+                >
+                  {app}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Technologies / Skills */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
             <Wrench className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-            Technologies Used
+            Skills Used
           </h2>
           <div className="flex flex-wrap gap-3">
             {project.technologies.map((tech, index) => (
@@ -110,6 +138,43 @@ const ProjectDetail = () => {
             ))}
           </div>
         </div>
+
+        {/* Image Gallery */}
+        {hasGallery && (
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+              <Images className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+              Project Images
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {project.images.map((img, index) => (
+                <div
+                  key={index}
+                  className="group cursor-pointer rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300"
+                  onClick={() => openLightbox(index)}
+                >
+                  <div className="relative overflow-hidden h-64">
+                    <img
+                      src={img.src}
+                      alt={img.caption}
+                      className="w-full h-full object-contain bg-gray-50 dark:bg-gray-800 group-hover:scale-105 transition-transform duration-500 p-2"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                      <span className="opacity-0 group-hover:opacity-100 transition-opacity text-white font-semibold bg-black/60 px-4 py-2 rounded-lg">
+                        Click to enlarge
+                      </span>
+                    </div>
+                  </div>
+                  {img.caption && (
+                    <div className="px-4 py-3 bg-white dark:bg-gray-900">
+                      <p className="text-sm text-gray-600 dark:text-gray-400 text-center">{img.caption}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Challenges */}
         <div className="mb-12">
@@ -155,6 +220,57 @@ const ProjectDetail = () => {
           </button>
         </div>
       </div>
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          <button
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-10"
+          >
+            <X className="w-6 h-6 text-white" />
+          </button>
+
+          {project.images.length > 1 && (
+            <>
+              <button
+                onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                className="absolute left-4 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-10"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              <button
+                onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                className="absolute right-4 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-10"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+            </>
+          )}
+
+          <div
+            className="max-w-5xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={project.images[lightboxIndex].src}
+              alt={project.images[lightboxIndex].caption}
+              className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+            />
+            {project.images[lightboxIndex].caption && (
+              <p className="text-white/80 text-center mt-4 text-sm">
+                {project.images[lightboxIndex].caption}
+              </p>
+            )}
+            <p className="text-white/50 text-center mt-2 text-xs">
+              {lightboxIndex + 1} / {project.images.length}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
