@@ -48,7 +48,16 @@ export const projectsData = [
       'Autonomous surface vehicle (ASV) designed for water-based surveillance, monitoring, and inspection with a stable catamaran hull.',
     image: 'https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/1lf2exnd_Nautix.png',
     images: [],
-    videos: [],
+    videos: [
+      {
+        src: 'https://drive.google.com/file/d/1QdQI9Bo20mAMOjA4hNsl41hUk9J_EdIr/view?usp=sharing',
+        caption: 'NAUTIX — Autonomous Surface Robot Demo',
+      },
+      {
+        src: 'https://drive.google.com/file/d/1KHhn5_2k_NR7YyDK_Va1MaNehFq0BgI8/view?usp=sharing',
+        caption: 'NAUTIX — Additional Footage',
+      },
+    ],
     fullDescription:
       'Designed and developed NAUTIX, an autonomous surface vehicle (ASV) for water-based surveillance, monitoring, and inspection applications. The system features a stable catamaran hull for improved stability on water, autonomous navigation capabilities powered by embedded control systems, and a modular architecture that enables reliable real-world deployment. The design prioritizes structural rigidity, waterproofing, and ease of maintenance while keeping the system lightweight for extended operational endurance.',
     technologies: ['Autonomous Systems', 'Robotics', 'System Integration', 'CAD Design', 'Rapid Prototyping', 'Embedded Systems', 'Sensor Fusion'],
