@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projectsData } from '../data/mockData';
-import { ArrowLeft, Clock, User, Wrench, Target, TrendingUp, Images, MapPin, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ArrowLeft, Clock, User, Wrench, Target, TrendingUp, Images, MapPin, ChevronLeft, ChevronRight, X, Video } from 'lucide-react';
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find(p => p.id === id);
   const [lightboxIndex, setLightboxIndex] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!project) {
     return (
@@ -168,6 +172,33 @@ const ProjectDetail = () => {
                   {img.caption && (
                     <div className="px-4 py-3 bg-white dark:bg-gray-900">
                       <p className="text-sm text-gray-600 dark:text-gray-400 text-center">{img.caption}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Video Gallery */}
+        {project.videos && project.videos.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+              <Video className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+              Project Videos
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {project.videos.map((vid, index) => (
+                <div key={index} className="rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 bg-black">
+                  <video
+                    src={vid.src}
+                    controls
+                    className="w-full"
+                    style={{ maxHeight: '320px' }}
+                  />
+                  {vid.caption && (
+                    <div className="px-4 py-3 bg-white dark:bg-gray-900">
+                      <p className="text-sm text-gray-600 dark:text-gray-400 text-center">{vid.caption}</p>
                     </div>
                   )}
                 </div>
