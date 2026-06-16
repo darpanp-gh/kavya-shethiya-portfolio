@@ -1,7 +1,5 @@
 import vtolRender1 from '../assets/images/WhatsApp_Image_2026-06-13_at_15.57.45.jpeg';
 import vtolRender2 from '../assets/images/WhatsApp_Image_2026-06-13_at_15.58.21.jpeg';
-import nautixCover from '../assets/images/WhatsApp_Image_2026-06-16_at_16.25.44.jpeg';
-import nautixPool from '../assets/images/WhatsApp_Image_2026-06-16_at_16.25.44_(1).jpeg';
 
 export const projectsData = [
   {
@@ -48,11 +46,8 @@ export const projectsData = [
     title: 'NAUTIX — Autonomous Surface Robot',
     shortDescription:
       'Autonomous surface vehicle (ASV) designed for water-based surveillance, monitoring, and inspection with a stable catamaran hull.',
-    image: nautixCover,
-    images: [
-      { src: nautixCover, caption: 'NAUTIX — CAD Render' },
-      { src: nautixPool, caption: 'NAUTIX — Water Testing at Pool' },
-    ],
+    image: 'https://customer-assets.emergentagent.com/job_ecf6f676-0158-4799-b857-6c13e6bfed78/artifacts/1lf2exnd_Nautix.png',
+    images: [],
     videos: [
       {
         src: 'https://drive.google.com/file/d/1QdQI9Bo20mAMOjA4hNsl41hUk9J_EdIr/view?usp=sharing',
